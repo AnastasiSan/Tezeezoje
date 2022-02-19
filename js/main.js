@@ -141,64 +141,20 @@ im.mask(selector);
 //   })
 //   });
 
-// $('.popup__form').submit(function(event) {
-//   event.preventDefault();
+$('.popup__form').submit(function(event) {
+  event.preventDefault();
 
-//   // alert($(this).attr('action'));
-//   // return
-//   $.ajax({
-//     type:'POST',
-//     url:'../main.php',
-//     data: new FormData(this),
-//     contentType: false,
-//     cache: false,
-//     processData: false,
-//     success: function() {
-//       alert('Скоро с вами свяжутся для подтверждения')
-//     },
-//   })
-// })
-
-const validation = new JustValidate('.popup__form', {
-  errorFieldCssClass: 'is-invalid',
-  errorFieldStyle: {
-      border: '1px solid red',
-  },
-  errorLabelCssClass: 'is-label-invalid',
-  errorLabelStyle: {
-      color: 'red',
-  },
-  focusInvalidField: true,
-  lockForm: true,
-});
-
-validation    
-  .addField('#phone', [
-      {
-          rule: 'required',
-          errorMessage: 'Введите телефон',
-      },
-      {
-          rule: 'customRegexp',
-          value: /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/,
-          errorMessage: 'Номер телефона должен состоять из 10 цифр'
-      },        
-  ])
-  .onSuccess((ev) => {
-          ev.preventDefault();
-          let form = document.getElementById("form");
-          async function handleSubmit() {
-              let data = new FormData(form);
-              fetch("https://formspree.io/f/xbjwjjdz", {
-                  method: "POST",
-                  body: data,
-                  headers: {
-                      'Accept': 'application/json'
-                  }
-              });
-          }
-          handleSubmit()
-          alert('ya');
+  // alert($(this).attr('action'));
+  // return
+  $.ajax({
+    type:'POST',
+    url:'../main.php',
+    data: new FormData(this),
+    contentType: false,
+    cache: false,
+    processData: false,
+    success: function() {
+      alert('Скоро с вами свяжутся для подтверждения')
+    },
   })
-  
-  
+})
