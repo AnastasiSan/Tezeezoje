@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="libs/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script defer src="libs/jquery.min.js"></script>
+  <script defer src="libs/swiper-bundle.min.js"></script>
+  <script defer src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+  <script defer src="libs/inputmask.min.js"></script>
+  <script defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script defer src="js/main.js"></script>
+
+  <title>Tezeezoje</title>
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="header">
+      <div class="header__container container">
+        <button class="header__burger burger btn-reset">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+        <a href="#" class="header__logo">
+          <img src="img/logo.png" alt="Logo of company">
+        </a>
+        <nav class="header__nav nav">
+          <ul class="nav__list list-reset">
+            <li class="nav__item"><a href="#" class="nav__link">À la carte</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Wijnkaart</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Lunchmenu</a></li>
+            <li class="nav__item"><a href="#contacts" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="tel:+3292825725" class="header__call">+32 9 282 57 25</a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="hero">
+        <div class="container">
+          <p class="hero__open">OPEN EVERYDAY 6AM - 9PM</p>
+          <p class="hero__descr">A bad day with lunch is better than a good day without it.</p>
+          <div class="hero__bottom">
+            <button class="hero__btn btn-main btn-reset">Reserve a table</button>
+            <ul class="hero__social social list-reset">
+              <li class="social__item"><a href="#" class="social__link" aria-label="facebook">Fb</a></li>
+              <li class="social__item"><a href="#" class="social__link" aria-label="instagram">Ig</a></li>
+              <li class="social__item"><a href="#" class="social__link" aria-label="twitter">Tw</a></li>
+              <li class="social__item"><a href="#" class="social__link" aria-label="youtube">Yt</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="lunch" id="lunch">
+        <div class="lunch__container container">
+          <ul class="lunch__list list-reset">
+            <li class="lunch__item">
+              <p class="lunch__day">Woensdag <time class="lunch__time">12/01</time></p>
+              <p class="lunch__dish">
+                <span class="lunch__dish-first">Salade met Serrano</span>
+                <span class="lunch__circle"></span>
+                <span class="lunch__circle"></span>
+                <span class="lunch__circle"></span>
+                <span class="lunch__dish-second">Steak Tartaar</span>
+              </p>
+            </li>
+            <li class="lunch__item">
+              <p class="lunch__day">Donderdag <time class="lunch__time">13/01</time></p>
+              <p class="lunch__dish">
+                <span class="lunch__dish-first">Toast Roquefort</span>
+                <span class="lunch__circle"></span>
+                <span class="lunch__circle"></span>
+                <span class="lunch__circle"></span>
+                <span class="lunch__dish-second">Penne met Kip en Prei</span>
+              </p>
+            </li>
+            <li class="lunch__item">
+              <p class="lunch__day">Vrijdag <time class="lunch__time">14/01</time></p>
+              <p class="lunch__dish">
+                <span class="lunch__dish-first">Verrassing van de Chef</span>
+                <span class="lunch__circle"></span>
+                <span class="lunch__circle"></span>
+                <span class="lunch__circle"></span>
+                <span class="lunch__dish-second">Penne met Kip en Prei</span>
+              </p>
+            </li>
+            <li class="lunch__item">
+              <p class="lunch__day">Vrijdag <time class="lunch__time">15/01</time></p>
+              <p class="lunch__dish">
+                <span class="lunch__dish-first">Verrassing van de Chef</span>
+                <span class="lunch__circle"></span>
+                <span class="lunch__circle"></span>
+                <span class="lunch__circle"></span>
+                <span class="lunch__dish-second">Penne met Kip en Prei</span>
+              </p>
+            </li>
+            <li class="lunch__item">
+              <p class="lunch__day">Vrijdag <time class="lunch__time">16/01</time></p>
+              <p class="lunch__dish">
+                <span class="lunch__dish-first">Verrassing van de Chef</span>
+                <span class="lunch__circle"></span>
+                <span class="lunch__circle"></span>
+                <span class="lunch__circle"></span>
+                <span class="lunch__dish-second">Penne met Kip en Prei</span>
+              </p>
+            </li>
+          </ul>
+          <div class="lunch__image">
+            <img src="img/lunch-1.jpg" alt="" class="lunch__img lunch__img--first">
+            <img src="img/lunch-2.jpg" alt="" class="lunch__img lunch__img--last">
+          </div>
+        </div>
+      </section>
+
+      <section class="bloquote">
+        <div class="container">
+          <div class="bloquote__quotes"></div>
+          <div class="bloquote__swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="bloquote__slide swiper-slide">
+                <h2 class="bloquote__title">Goede service, lekker eten, toffe ambiance</h2>
+                <p class="bloquote__descr">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren.
+                </p>
+                <p class="bloquote__author">
+                  ALAIN HEYNDRICKX
+                </p>
+              </div>
+              <div class="bloquote__slide swiper-slide">
+                <h2 class="bloquote__title">Goede service, lekker eten, toffe ambiance</h2>
+                <p class="bloquote__descr">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren.
+                </p>
+                <p class="bloquote__author">
+                  ALAIN HEYNDRICKX
+                </p>
+              </div>
+              <div class="bloquote__slide swiper-slide">
+                <h2 class="bloquote__title">Goede service, lekker eten, toffe ambiance</h2>
+                <p class="bloquote__descr">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren.
+                </p>
+                <p class="bloquote__author">
+                  ALAIN HEYNDRICKX
+                </p>
+              </div>
+            </div>
+            <div class="bloquote__prev prev swiper-button-prev"></div>
+            <div class="bloquote__next next swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <div class="container">
+          <ul class="services__list list-reset">
+            <li class="services__item">
+              <div class="services__caption">
+                <h2 class="services__title">Lekker Eten</h2>
+                <p class="services__descr">
+                  Eten gaat niet over indruk maken op mensen. Het gaat erom dat ze zich op hun gemak voelen. Dat is onze
+                  filosofie, goed eten in een goede sfeer.
+                </p>
+              </div>
+              <img src="img/services-1.jpg" alt="" class="services__img">
+            </li>
+            <li class="services__item">
+              <div class="services__caption">
+                <h2 class="services__title">Toffe Ambiance</h2>
+                <p class="services__descr">
+                  Het creëren van de juiste sfeer is zeer belangrijk voor ons. We nemen onze tijd om te zorgen dat alle
+                  elementen bijdragen aan de juiste setting.
+                </p>
+              </div>
+              <img src="img/services-2.jpg" alt="" class="services__img">
+            </li>
+            <li class="services__item">
+              <div class="services__caption">
+                <h2 class="services__title">Lekkere Cocktails</h2>
+                <p class="services__descr">
+                  Ons doel is simpel: een gastvrije plek bieden waar u kunt genieten van een onvergetelijke cocktail,
+                  een goed gesprek en lekker eten.
+                </p>
+              </div>
+              <img src="img/services-3.jpg" alt="" class="services__img">
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contacts" id="contacts">
+        <div class="container">
+          <div class="contacts__caption">
+            <div class="contacts__left">
+              <h2 class="contacts__title">Contacts</h2>
+              <ul class="contacts__list list-reset">
+                <li class="contacts__item">
+                  <span class="contacts__icon contacts__icon--call"></span>
+                  <div class="contacts__descr">
+                    <p class="contacts__name">Phone Number</p>
+                    <a href="tel:+3292825725" class="contacts__content">+32 9 282 57 25</a>
+                  </div>
+                </li>
+                <li class="contacts__item">
+                  <span class="contacts__icon contacts__icon--mail"></span>
+                  <div class="contacts__descr">
+                    <p class="contacts__name">Email</p>
+                    <a href="mail:info@email.com" class="contacts__content">info@email.com</a>
+                  </div>
+                </li>
+                <li class="contacts__item">
+                  <span class="contacts__icon contacts__icon--clock"></span>
+                  <div class="contacts__descr">
+                    <p class="contacts__name">Openning Hours</p>
+                    <p class="contacts__content">Everyday from 6 AM - 9 PM</p>
+                  </div>
+                </li>
+                <li class="contacts__item">
+                  <span class="contacts__icon contacts__icon--map"></span>
+                  <div class="contacts__descr">
+                    <p class="contacts__name">Map Street</p>
+                    <address class="contacts__content">Jl. Raya Surabaya 2787</address>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <form action="#" class="contacts__form">
+              <fieldset class="contacts__fieldset">
+                <legend class="contacts__title">have any questions?</legend>
+                <div class="contacts__form-top">
+                  <label class="contacts__label">
+                    <span class="contacts__label-text">Name</span>
+                    <input type="text" name="name" id="name" class="contacts__input" placeholder="Input your name">
+                  </label>
+                  <label class="contacts__label">
+                    <span class="contacts__label-text">Email</span>
+                    <input type="email" name="mail" id="mail" class="contacts__input" placeholder="Input your email">
+                  </label>
+                  <label class="contacts__label">
+                    <span class="contacts__label-text">Speciale Request</span>
+                    <textarea name="comment" id="comment" class="contacts__input textarea"
+                      placeholder="Input your special request"></textarea>
+                  </label>
+                </div>
+                <button class="contacts__btn btn-main btn-reset">Send</button>
+              </fieldset>
+            </form>
+          </div>
+          <div class="contacts__map" id="map"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container container">
+        <a href="#" class="footer__logo">
+          <img src="img/footer-logo.png" alt="logo of company">
+        </a>
+        <ul class="footer__social social list-reset">
+          <li class="social__item"><a href="#" class="social__link" aria-label="facebook">Fb</a></li>
+          <li class="social__item"><a href="#" class="social__link" aria-label="instagram">Ig</a></li>
+          <li class="social__item"><a href="#" class="social__link" aria-label="twitter">Tw</a></li>
+          <li class="social__item"><a href="#" class="social__link" aria-label="youtube">Yt</a></li>
+        </ul>
+      </div>
+    </footer>
+    <div class="popup-bg">
+      <div class="popup">
+        <button class="popup__close btn-reset">x</button>
+        <form action="main.php" method="post" class="popup__form">
+          <fildset class="popup__fieldset">
+            <legend class="popup__title">Leave a request</legend>
+            <label class="popup__label">
+              <span class="popup__text">Your phone</span>
+              <input type="tel" name="phone" id="phone" class="popup__input" data-validate-field="tel"
+                data-validate-rules="phone">
+            </label>
+            <label class="popup__label">
+              <span class="popup__text">Date and time</span>
+              <input type="datetime-local" name="date" id="date" data-validate-rules="date" class="popup__input">
+            </label>
+            <button type="submit" class="popup__btn btn-reset" id="submit-btn">Send</button>
+          </fildset>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

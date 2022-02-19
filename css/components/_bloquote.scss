@@ -1,0 +1,78 @@
+.bloquote {
+  margin-bottom: 109px;
+  padding: 217px 0 227px;
+  background-color: $main;
+  color: $accent;
+  &__quotes {
+    width: 83px;
+    height: 58px;
+    margin: 0 auto;
+    margin-bottom: 34px;
+    background-image: url('../../img/quotes.svg');
+  }
+  &__swiper {
+    width: 99%;
+    text-align: center;
+  }
+  &__title,
+  &__descr {
+    max-width: 780px;
+    margin: 0 auto;
+    line-height: 40px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 36px;
+  }
+  &__descr {
+    margin-bottom: 38px;
+    color: $white;
+  }
+  &__author {
+    margin: 0;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.245em;
+  }
+  &__prev,
+  &__next {
+    top: 50%;
+  }
+}
+
+@media(max-width:768px) {
+  .bloquote {
+    &__title,
+    &__descr {
+      max-width: 79%;
+    }
+  }
+}
+
+@media (max-width:576px) {
+  .bloquote {
+    margin-bottom: 35px;
+    padding: 50px 0 50px;
+    &__quotes {
+      width: 63px;
+      height: 38px;
+      margin-bottom: 10px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &__title {
+      margin-bottom: 5px;
+      font-size: 24px;
+    }
+    &__descr {
+      margin-bottom: 15px;
+      font-size: 12px;
+      line-height: 30px;
+    }
+    &__author {
+      font-size: 18px;
+    }
+  }
+
+}
